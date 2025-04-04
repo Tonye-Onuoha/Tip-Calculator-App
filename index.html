@@ -1,22 +1,85 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
-  <title>Frontend Mentor | Tip calculator app</title>
+    <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Bill
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>SPLI</h1>
+        <h1>TTER</h1>
+      </header>
+      <div class="calculator-container">
+        <div class="calculator-form">
+          <form id="form">
+            <div class="bill-container">
+              <p>Bill</p>
+              <div class="bill-input-container">
+                <input type="number" />
+                <img src="#" alt="dollar-icon" />
+              </div>
+            </div>
+            <div class="tip-select-container">
+              <p>Select Tip %</p>
+              <div class="discount-container">
+                <button class="discount-button">5%</button>
+                <button class="discount-button">10%</button>
+                <button class="discount-button">15%</button>
+                <button class="discount-button">25%</button>
+                <button class="discount-button">50%</button>
+                <button class="discount-button">Custom</button>
+              </div>
+            </div>
+            <div class="people-container">
+              <p>Number of People</p>
+              <div class="people-input-container">
+                <input type="number" />
+                <img src="#" alt="person-icon" />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="calculator-output">
+          <div class="tip-amount-container">
+            <p>Tip Amount / person</p>
+            <p class="tip-value"></p>
+          </div>
+          <div class="total-amount-container">
+            <p>Total / person</p>
+            <p class="total-value"></p>
+          </div>
+          <div class="reset-button-container">
+            <button id="reset-button">Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"><b>Frontend Mentor</b></a
+      >. Coded by <a href="https://github.com/Tonye-Onuoha"><b>Tonye Hugo Onuoha</b></a
+      >.
+    </div>
+  </body>
+</html>
+<!--
+Bill
 
   Select Tip %
   5%
@@ -35,10 +98,4 @@
   / person
 
   Reset
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
+-->
