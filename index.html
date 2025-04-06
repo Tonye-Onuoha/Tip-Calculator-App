@@ -6,7 +6,14 @@
     <!-- displays site properly based on user's device -->
 
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet" />
+    <!-- custom CSS link -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <title>Frontend Mentor | Tip calculator app</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -21,19 +28,18 @@
     </style>
   </head>
   <body>
+    <header>
+      <h1>SPLI</h1>
+      <h1>TTER</h1>
+    </header>
     <main>
-      <header>
-        <h1>SPLI</h1>
-        <h1>TTER</h1>
-      </header>
-      <div class="calculator-container">
+      <div class="calculator-container space-mono-regular">
         <div class="calculator-form">
           <form id="form">
             <div class="bill-container">
               <p>Bill</p>
               <div class="bill-input-container">
-                <input type="number" />
-                <img src="#" alt="dollar-icon" />
+                <input id="bill-input" type="number" class="space-mono-bold" />
               </div>
             </div>
             <div class="tip-select-container">
@@ -44,26 +50,37 @@
                 <button class="discount-button">15%</button>
                 <button class="discount-button">25%</button>
                 <button class="discount-button">50%</button>
-                <button class="discount-button">Custom</button>
+                <button id="custom-discount" class="discount-button">Custom</button>
               </div>
             </div>
             <div class="people-container">
               <p>Number of People</p>
               <div class="people-input-container">
-                <input type="number" />
-                <img src="#" alt="person-icon" />
+                <input id="people-input" type="number" class="space-mono-bold" />
               </div>
             </div>
           </form>
         </div>
         <div class="calculator-output">
           <div class="tip-amount-container">
-            <p>Tip Amount / person</p>
-            <p class="tip-value"></p>
+            <div>
+              <p id="tip-amount-label">Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <div class="tip-value-container">
+              <span class="dollar-sign">$</span>
+              <p class="tip-value">4.27</p>
+            </div>
           </div>
           <div class="total-amount-container">
-            <p>Total / person</p>
-            <p class="total-value"></p>
+            <div>
+              <p id="total-label">Total</p>
+              <p>/ person</p>
+            </div>
+            <div class="total-value-container">
+              <span class="dollar-sign">$</span>
+              <p class="total-value">32.79</p>
+            </div>
           </div>
           <div class="reset-button-container">
             <button id="reset-button">Reset</button>
