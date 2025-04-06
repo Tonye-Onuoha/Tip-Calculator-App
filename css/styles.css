@@ -5,11 +5,10 @@ body {
 }
 
 header {
-    text-align: center;
-    font-family: "Space Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
-    color: hsl(183, 100%, 15%);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 p {
@@ -32,11 +31,11 @@ p {
 
 .calculator-container {
     width: 100%;
-    padding: 25px;
+    padding: 30px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 20px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
     background-color: hsl(0, 100%, 100%);
@@ -63,6 +62,11 @@ input[type="number"] {
     -moz-appearance: textfield;
     color: hsl(183, 100%, 15%);
     background-color: hsl(189, 47%, 97%);
+}
+
+input[type="number"]:focus {
+    cursor: pointer;
+    outline: 2px solid hsl(172, 67%, 45%);
 }
 
 input#bill-input {
@@ -111,10 +115,6 @@ input#people-input {
     background-color: hsl(189, 47%, 97%);
 }
 
-#custom-discount:hover {
-    cursor: default;
-}
-
 .calculator-output {
     width: 100%;
     padding: 25px;
@@ -124,6 +124,12 @@ input#people-input {
     flex-direction: column;
     gap: 30px;
     background-color: hsl(183, 100%, 15%);
+}
+
+.amount-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .tip-amount-container,
@@ -148,17 +154,17 @@ input#people-input {
 
 .tip-value,
 .total-value {
-    font-size: 24px;
+    font-size: 36px;
     color: hsl(172, 67%, 45%);
 }
 span.dollar-sign {
-    font-size: 16px;
+    font-size: 36px;
 }
 
 #reset-button {
     width: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: none;
     border-radius: 5px;
     font-family: "Space Mono", monospace;
@@ -166,4 +172,66 @@ span.dollar-sign {
     text-transform: uppercase;
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
+}
+
+#reset-button:hover {
+    cursor: pointer;
+    background-color: aquamarine;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (min-width: 860px) {
+    html,
+    body {
+        height: 100%;
+    }
+    main {
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calculator-container {
+        width: 70%;
+        max-width: 940px;
+        flex-direction: row;
+        border-radius: 25px;
+        gap: 40px;
+        box-shadow: 5px 15px 20px 10px hsl(172, 32%, 64%);
+    }
+    .calculator-form,
+    .calculator-output {
+        width: 50%;
+    }
+    .calculator-form {
+        box-sizing: border-box;
+    }
+    .calculator-output {
+        justify-content: space-between;
+    }
+    .tip-value,
+    .total-value {
+        font-size: 24px;
+    }
+    span.dollar-sign {
+        font-size: 24px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    #form {
+        gap: 50px;
+    }
+    .discount-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .tip-value,
+    .total-value {
+        font-size: 36px;
+    }
+    span.dollar-sign {
+        font-size: 36px;
+    }
 }
