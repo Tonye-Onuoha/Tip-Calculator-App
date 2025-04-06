@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-size: 16px;
+    background-color: hsl(185, 41%, 84%);
+}
+
+header {
+    text-align: center;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    color: hsl(183, 100%, 15%);
+}
+
+p {
+    margin: 0;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+.space-mono-regular {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.space-mono-bold {
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.calculator-container {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: hsl(0, 100%, 100%);
+}
+
+#form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 7.5px;
+    box-sizing: border-box;
+    margin: 5px 0 0 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    text-align: right;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 47%, 97%);
+}
+
+input#bill-input {
+    background-image: url("../images/icon-dollar.svg");
+}
+
+input#people-input {
+    background-image: url("../images/icon-person.svg");
+}
+
+input#bill-input,
+input#people-input {
+    background-repeat: no-repeat;
+    background-position: 7.5px 50%;
+}
+
+.discount-container {
+    width: 100%;
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.discount-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 24px;
+    text-align: center;
+    color: hsl(0, 100%, 100%);
+    background-color: hsl(183, 100%, 15%);
+}
+
+.discount-button:hover {
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+}
+
+#custom-discount {
+    color: hsl(186, 14%, 43%);
+    background-color: hsl(189, 47%, 97%);
+}
+
+#custom-discount:hover {
+    cursor: default;
+}
+
+.calculator-output {
+    width: 100%;
+    padding: 25px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.tip-amount-container,
+.total-amount-container {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tip-amount-label,
+#total-label {
+    color: hsl(0, 100%, 100%);
+}
+
+.tip-value-container,
+.total-value-container {
+    display: flex;
+    align-items: center;
+    color: hsl(172, 67%, 45%);
+}
+
+.tip-value,
+.total-value {
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+}
+span.dollar-sign {
+    font-size: 16px;
+}
+
+#reset-button {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 5px;
+    font-family: "Space Mono", monospace;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
