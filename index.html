@@ -19,6 +19,9 @@
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
+        font-family: "Space Mono", monospace;
+        font-weight: 400;
+        font-style: normal;
         font-size: 11px;
         text-align: center;
       }
@@ -29,8 +32,7 @@
   </head>
   <body>
     <header>
-      <h1>SPLI</h1>
-      <h1>TTER</h1>
+      <img src="./images/logo.svg" alt="splitter-logo" />
     </header>
     <main>
       <div class="calculator-container space-mono-regular">
@@ -62,24 +64,26 @@
           </form>
         </div>
         <div class="calculator-output">
-          <div class="tip-amount-container">
-            <div>
-              <p id="tip-amount-label">Tip Amount</p>
-              <p>/ person</p>
+          <div class="amount-container">
+            <div class="tip-amount-container">
+              <div>
+                <p id="tip-amount-label">Tip Amount</p>
+                <p>/ person</p>
+              </div>
+              <div class="tip-value-container">
+                <span class="dollar-sign">$</span>
+                <p class="tip-value">4.27</p>
+              </div>
             </div>
-            <div class="tip-value-container">
-              <span class="dollar-sign">$</span>
-              <p class="tip-value">4.27</p>
-            </div>
-          </div>
-          <div class="total-amount-container">
-            <div>
-              <p id="total-label">Total</p>
-              <p>/ person</p>
-            </div>
-            <div class="total-value-container">
-              <span class="dollar-sign">$</span>
-              <p class="total-value">32.79</p>
+            <div class="total-amount-container">
+              <div>
+                <p id="total-label">Total</p>
+                <p>/ person</p>
+              </div>
+              <div class="total-value-container">
+                <span class="dollar-sign">$</span>
+                <p class="total-value">32.79</p>
+              </div>
             </div>
           </div>
           <div class="reset-button-container">
