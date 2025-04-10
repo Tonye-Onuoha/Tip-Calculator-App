@@ -39,26 +39,32 @@
         <div class="calculator-form">
           <form id="form">
             <div class="bill-container">
-              <p>Bill</p>
+              <div class="label-container">
+                <label for="people-input">Bill</label>
+                <span id="bill-error-message" style="visibility: hidden"></span>
+              </div>
               <div class="bill-input-container">
-                <input id="bill-input" type="number" class="space-mono-bold" />
+                <input id="bill-input" type="number" name="bill" class="space-mono-bold" />
               </div>
             </div>
             <div class="tip-select-container">
               <p>Select Tip %</p>
               <div class="discount-container">
-                <button class="discount-button">5%</button>
-                <button class="discount-button">10%</button>
-                <button class="discount-button">15%</button>
-                <button class="discount-button">25%</button>
-                <button class="discount-button">50%</button>
+                <button type="submit" class="discount-button" value="5">5%</button>
+                <button type="submit" class="discount-button" value="10">10%</button>
+                <button type="submit" class="discount-button" value="15">15%</button>
+                <button type="submit" class="discount-button" value="25">25%</button>
+                <button type="submit" class="discount-button" value="50">50%</button>
                 <button id="custom-discount" class="discount-button">Custom</button>
               </div>
             </div>
             <div class="people-container">
-              <p>Number of People</p>
+              <div class="label-container">
+                <label for="people-input">Number of People</label>
+                <span id="people-error-message" style="visibility: hidden"></span>
+              </div>
               <div class="people-input-container">
-                <input id="people-input" type="number" class="space-mono-bold" />
+                <input id="people-input" type="number" name="people" class="space-mono-bold" />
               </div>
             </div>
           </form>
@@ -72,7 +78,7 @@
               </div>
               <div class="tip-value-container">
                 <span class="dollar-sign">$</span>
-                <p class="tip-value">4.27</p>
+                <p class="tip-value">0.00</p>
               </div>
             </div>
             <div class="total-amount-container">
@@ -82,7 +88,7 @@
               </div>
               <div class="total-value-container">
                 <span class="dollar-sign">$</span>
-                <p class="total-value">32.79</p>
+                <p class="total-value">0.00</p>
               </div>
             </div>
           </div>
@@ -97,26 +103,6 @@
       >. Coded by <a href="https://github.com/Tonye-Onuoha"><b>Tonye Hugo Onuoha</b></a
       >.
     </div>
+    <script src="js/tip-calculator.js"></script>
   </body>
 </html>
-<!--
-Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
--->
