@@ -99,12 +99,12 @@ const selectTipHandler = (e) => {
     // select a tip if none has been selected.
     if (!selectedTip) {
         selectedTip = e.currentTarget.value;
-        e.currentTarget.className += " selected-tip";
+        e.currentTarget.classList.add("selected-tip");
     } else {
         // if one has already been selected, reset it's style before selecting a new tip.
         resetSelectedTip();
         selectedTip = e.currentTarget.value;
-        e.currentTarget.className += " selected-tip";
+        e.currentTarget.classList.add("selected-tip");
     }
 };
 
