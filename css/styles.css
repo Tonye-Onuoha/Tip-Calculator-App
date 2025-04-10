@@ -101,11 +101,6 @@ input#people-input {
     background-color: hsl(183, 100%, 15%);
 }
 
-.selected-tip {
-    color: #000000;
-    background-color: hsl(172, 40%, 50%);
-}
-
 .discount-button:hover {
     cursor: pointer;
     background-color: hsl(172, 67%, 45%);
@@ -114,6 +109,11 @@ input#people-input {
 #custom-discount {
     color: hsl(186, 14%, 43%);
     background-color: hsl(189, 47%, 97%);
+}
+
+.selected-tip {
+    color: #000000;
+    background-color: hsl(172, 40%, 50%);
 }
 
 .label-container {
