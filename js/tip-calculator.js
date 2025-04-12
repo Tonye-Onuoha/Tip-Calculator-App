@@ -59,11 +59,10 @@ function handleInputData(key, value, errorsObject) {
 
 // This function returns true if the form-data is valid, otherwise it returns false.
 function dataIsValid(data, errorsObject) {
-    let isValid;
     Object.keys(data).forEach((key) => {
         handleInputData(key, data[key], errorsObject);
     });
-    isValid = Object.keys(errorsObject).length === 0;
+    const isValid = Object.keys(errorsObject).length === 0;
 
     return isValid;
 }
@@ -177,7 +176,7 @@ discountButtonsArray.forEach((discountButton) => {
 });
 
 resetButton.addEventListener("click", (e) => {
-    if (e.currentTarget.style.backgroundColor === "darkcyan") return;
+    if (!e.currentTarget.style.backgroundColor || e.currentTarget.style.backgroundColor === "rgb(46, 107, 99)") return;
     billInput.value = "";
     billInput.style.outline = "none";
     billErrorMessage.textContent = "";
